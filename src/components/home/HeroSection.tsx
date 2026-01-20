@@ -88,5 +88,4 @@ export function HeroSection() {
     );
 }
 
-// Helper icons
-import { ChevronRight } from "lucide-react";
+
