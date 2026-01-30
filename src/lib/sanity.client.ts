@@ -74,4 +74,48 @@ export const queries = {
     "categories": categories[]->title,
     mainImage
   }`,
+
+  // Get all projects
+  allProjects: `*[_type == "project"] | order(order asc) {
+    _id,
+    title,
+    "slug": slug.current,
+    description,
+    category,
+    tags,
+    github,
+    streamlit,
+    tinkercad,
+    external,
+    featured
+  }`,
+
+  // Get projects by category
+  projectsByCategory: `*[_type == "project" && category == $category] | order(order asc) {
+    _id,
+    title,
+    "slug": slug.current,
+    description,
+    category,
+    tags,
+    github,
+    streamlit,
+    tinkercad,
+    external,
+    featured
+  }`,
+
+  // Get featured projects
+  featuredProjects: `*[_type == "project" && featured == true] | order(order asc) {
+    _id,
+    title,
+    "slug": slug.current,
+    description,
+    category,
+    tags,
+    github,
+    streamlit,
+    tinkercad,
+    external
+  }`,
 };
