@@ -38,6 +38,7 @@ export const queries = {
     publishedAt,
     readTime,
     "categories": categories[]->title,
+    "categoryRefs": categories[]._ref,
     mainImage,
     "author": author->{name, image, bio}
   }`,
@@ -60,5 +61,17 @@ export const queries = {
     title,
     "slug": slug.current,
     description
+  }`,
+
+  // Get related posts (same category, excluding current post)
+  relatedPosts: `*[_type == "post" && _id != $currentId && count(categories[@._ref in $categoryRefs]) > 0 && !(_id in path("drafts.**"))] | order(publishedAt desc) [0...3] {
+    _id,
+    title,
+    slug,
+    excerpt,
+    publishedAt,
+    readTime,
+    "categories": categories[]->title,
+    mainImage
   }`,
 };

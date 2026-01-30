@@ -7,6 +7,7 @@ import { AdBanner } from '@/components/ui/AdBanner'
 import { SidebarAdLayout } from '@/components/ui/SidebarAdLayout'
 import { ReadingProgressBar } from '@/components/ui/ReadingProgressBar'
 import { CodeBlock } from '@/components/ui/CodeBlock'
+import { RelatedArticles } from '@/components/ui/RelatedArticles'
 
 // Revalidate every 60 seconds
 export const revalidate = 60
@@ -41,6 +42,14 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     const post = await client.fetch(queries.postBySlug, { slug })
 
     if (!post) notFound()
+
+    // Fetch related posts based on categories
+    const relatedPosts = post.categoryRefs?.length > 0
+        ? await client.fetch(queries.relatedPosts, {
+            currentId: post._id,
+            categoryRefs: post.categoryRefs
+        })
+        : []
 
     return (
         <SidebarAdLayout>
@@ -143,6 +152,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                             }}
                         />
                     </div>
+
+                    {/* Related Articles */}
+                    <RelatedArticles
+                        posts={relatedPosts}
+                        currentPostId={post._id}
+                    />
 
                     {/* Ad after content */}
                     <AdBanner slot="post-footer" className="mt-12" />
