@@ -72,7 +72,11 @@ export function BlogGridClient({ posts }: BlogGridClientProps) {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5, delay: index * 0.1 }}
                                 >
-                                    <Link href={`/blog/${post.slug?.current || ""}`}>
+                                    <a
+                                        href={`https://blog.justinsaju.me/blog/${post.slug?.current || ""}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
                                         <div className="glass rounded-2xl p-8 h-full hover:glow hover:scale-[1.02] transition-all duration-500 group cursor-pointer relative overflow-hidden">
                                             {/* Hover gradient effect */}
                                             <div className="absolute inset-0 bg-gradient-to-br from-accent-cyan/5 to-accent-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -126,7 +130,7 @@ export function BlogGridClient({ posts }: BlogGridClientProps) {
                                                 </div>
                                             </div>
                                         </div>
-                                    </Link>
+                                    </a>
                                 </motion.article>
                             ))}
                         </div>
@@ -139,13 +143,15 @@ export function BlogGridClient({ posts }: BlogGridClientProps) {
                             transition={{ duration: 0.6, delay: 0.4 }}
                             className="text-center mt-16"
                         >
-                            <Link
-                                href="/blog"
+                            <a
+                                href="https://blog.justinsaju.me"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 px-8 py-4 glass rounded-xl text-foreground hover:glow transition-all group"
                             >
                                 View All Posts
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                            </Link>
+                            </a>
                         </motion.div>
                     </>
                 ) : (
