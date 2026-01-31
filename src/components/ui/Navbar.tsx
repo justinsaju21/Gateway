@@ -151,13 +151,15 @@ export function Navbar() {
                 </AnimatePresence>
               </div>
 
-              <Link
-                href="/blog"
+              <a
+                href="https://blogs.justinsaju.me"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ color: "var(--foreground-muted)" }}
                 className="text-sm font-medium hover:opacity-80 transition-opacity"
               >
                 Blog
-              </Link>
+              </a>
               <ThemeToggle />
             </div>
 
@@ -237,14 +239,16 @@ export function Navbar() {
                   ))}
                 </div>
 
-                <Link
-                  href="/blog"
+                <a
+                  href="https://blogs.justinsaju.me"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setMobileMenuOpen(false)}
                   style={{ color: "var(--foreground-muted)" }}
                   className="block py-2.5 px-4 hover:bg-white/5 rounded-lg transition-colors"
                 >
                   Blog
-                </Link>
+                </a>
 
                 <Link
                   href="https://portfolio.justinsaju.me"

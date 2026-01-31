@@ -157,13 +157,15 @@ export default function LearnPage() {
                     transition={{ delay: 0.5 }}
                     className="text-center mt-16"
                 >
-                    <Link
-                        href="/blog"
+                    <a
+                        href="https://blogs.justinsaju.me"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-accent-purple/20 text-accent-cyan border border-accent-purple/30 hover:bg-accent-purple/30 transition-colors"
                     >
                         Read the Blog
                         <ChevronRight className="w-4 h-4" />
-                    </Link>
+                    </a>
                 </motion.div>
 
                 <AdBanner slot="learn-footer" className="mt-20" />

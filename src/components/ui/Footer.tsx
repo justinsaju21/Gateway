@@ -14,7 +14,7 @@ const socialLinks = [
 const footerLinks = [
     { href: "/", label: "Home" },
     { href: "https://projects.justinsaju.me", label: "Projects Hub", external: true },
-    { href: "/blog", label: "Blog" },
+    { href: "https://blogs.justinsaju.me", label: "Blog", external: true },
     { href: "/about", label: "About" },
 ];
 
