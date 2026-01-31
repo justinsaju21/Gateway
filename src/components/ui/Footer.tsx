@@ -13,6 +13,7 @@ const socialLinks = [
 
 const footerLinks = [
     { href: "/", label: "Home" },
+    { href: "https://projects.justinsaju.me", label: "Projects Hub", external: true },
     { href: "/blog", label: "Blog" },
     { href: "/about", label: "About" },
 ];
@@ -83,14 +84,27 @@ export function Footer() {
                         <ul className="space-y-3">
                             {footerLinks.map((link) => (
                                 <li key={link.href}>
-                                    <Link
-                                        href={link.href}
-                                        className="group flex items-center gap-2 text-foreground-muted hover:text-foreground transition-colors"
-                                    >
-                                        <span className="w-1.5 h-1.5 rounded-full bg-accent-cyan/50 group-hover:bg-accent-cyan transition-colors" />
-                                        {link.label}
-                                        <ArrowUpRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-                                    </Link>
+                                    {link.external ? (
+                                        <a
+                                            href={link.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="group flex items-center gap-2 text-foreground-muted hover:text-foreground transition-colors"
+                                        >
+                                            <span className="w-1.5 h-1.5 rounded-full bg-accent-cyan/50 group-hover:bg-accent-cyan transition-colors" />
+                                            {link.label}
+                                            <ArrowUpRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                                        </a>
+                                    ) : (
+                                        <Link
+                                            href={link.href}
+                                            className="group flex items-center gap-2 text-foreground-muted hover:text-foreground transition-colors"
+                                        >
+                                            <span className="w-1.5 h-1.5 rounded-full bg-accent-cyan/50 group-hover:bg-accent-cyan transition-colors" />
+                                            {link.label}
+                                            <ArrowUpRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                                        </Link>
+                                    )}
                                 </li>
                             ))}
                         </ul>

@@ -89,6 +89,15 @@ export function Navbar() {
               >
                 Home
               </Link>
+              <a
+                href="https://projects.justinsaju.me"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "var(--foreground-muted)" }}
+                className="text-sm font-medium hover:opacity-80 transition-opacity"
+              >
+                Projects
+              </a>
 
               {/* Ecosystem Dropdown */}
               <div
@@ -201,6 +210,16 @@ export function Navbar() {
                 >
                   Home
                 </Link>
+                <a
+                  href="https://projects.justinsaju.me"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                  style={{ color: "var(--foreground-muted)" }}
+                  className="block py-2.5 px-4 hover:bg-white/5 rounded-lg transition-colors"
+                >
+                  Projects
+                </a>
 
                 <div className="py-2">
                   <span className="px-4 text-xs font-semibold text-accent-cyan uppercase tracking-wider">Ecosystem</span>

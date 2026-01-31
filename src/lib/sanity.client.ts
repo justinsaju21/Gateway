@@ -87,7 +87,8 @@ export const queries = {
     streamlit,
     tinkercad,
     external,
-    featured
+    featured,
+    "author": author->name
   }`,
 
   // Get projects by category
@@ -102,7 +103,8 @@ export const queries = {
     streamlit,
     tinkercad,
     external,
-    featured
+    featured,
+    "author": author->name
   }`,
 
   // Get featured projects

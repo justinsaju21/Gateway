@@ -135,7 +135,6 @@ export default function SoftwarePage() {
                                     >
                                         <div className="flex items-start justify-between mb-4">
                                             <div
-                                                className="p-3 rounded-xl"
                                                 style={{ backgroundColor: `${project.color}20` }}
                                             >
                                                 <project.icon

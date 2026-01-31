@@ -108,7 +108,6 @@ export default function LearnPage() {
                                     >
                                         <div className="flex items-start justify-between mb-4">
                                             <div
-                                                className="p-3 rounded-xl"
                                                 style={{ backgroundColor: `${topic.color}20` }}
                                             >
                                                 <topic.icon
