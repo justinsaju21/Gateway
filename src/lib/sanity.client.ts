@@ -88,7 +88,7 @@ export const queries = {
     tinkercad,
     external,
     featured,
-    "author": author->name
+    "authors": authors[]->{name, image}
   }`,
 
   // Get projects by category
@@ -104,7 +104,7 @@ export const queries = {
     tinkercad,
     external,
     featured,
-    "author": author->name
+    "authors": authors[]->{name, image}
   }`,
 
   // Get featured projects
