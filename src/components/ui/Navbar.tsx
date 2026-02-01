@@ -28,10 +28,10 @@ export function Navbar() {
             width: isScrolled ? "95%" : "100%",
             maxWidth: isScrolled ? "800px" : "none",
             borderRadius: isScrolled ? "9999px" : "0",
-            backgroundColor: isScrolled ? "rgba(30, 27, 75, 0.8)" : "transparent",
+            backgroundColor: isScrolled ? "var(--glass-bg)" : "transparent",
             backdropFilter: isScrolled ? "blur(16px)" : "none",
-            border: isScrolled ? "1px solid rgba(255, 255, 255, 0.1)" : "none",
-            boxShadow: isScrolled ? "0 0 40px -10px rgba(124, 58, 237, 0.3)" : "none",
+            border: isScrolled ? "1px solid var(--glass-border)" : "none",
+            boxShadow: isScrolled ? "0 0 40px -10px rgba(124, 58, 237, 0.15)" : "none",
             paddingTop: isScrolled ? "0" : "1rem",
           }}
           className="pointer-events-auto transition-all duration-500 ease-out"
@@ -47,10 +47,10 @@ export function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5 group">
               <div
-                style={{ backgroundColor: "#a78bfa" }}
+                style={{ backgroundColor: "var(--accent-cyan)" }}
                 className="flex items-center justify-center w-9 h-9 rounded-lg font-bold text-lg group-hover:scale-105 transition-transform"
               >
-                <span style={{ color: "#030014" }}>J</span>
+                <span style={{ color: "var(--background)" }}>J</span>
               </div>
               <div className="flex items-baseline gap-1.5">
                 <span style={{ color: "var(--foreground)" }} className="font-bold text-lg tracking-tight">Justin Jacob</span>
@@ -91,7 +91,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  backgroundColor: "#7c3aed",
+                  backgroundColor: "var(--accent-cyan)",
                   color: "#ffffff",
                   boxShadow: "0 0 20px -5px rgba(124, 58, 237, 0.5)",
                 }}
@@ -108,7 +108,7 @@ export function Navbar() {
               className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+              {mobileMenuOpen ? <X size={22} style={{ color: "var(--foreground)" }} /> : <Menu size={22} style={{ color: "var(--foreground)" }} />}
             </button>
           </nav>
 
@@ -118,9 +118,9 @@ export function Navbar() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               style={{
-                backgroundColor: "rgba(30, 27, 75, 0.95)",
+                backgroundColor: "var(--glass-bg)",
                 backdropFilter: "blur(16px)",
-                borderTop: "1px solid rgba(255, 255, 255, 0.1)",
+                borderTop: "1px solid var(--glass-border)",
               }}
               className="md:hidden rounded-b-2xl mx-4 mb-4 overflow-hidden"
             >
