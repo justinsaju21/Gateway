@@ -123,8 +123,8 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                backgroundColor: "rgba(30, 27, 75, 0.5)",
-                border: "1px solid rgba(139, 92, 246, 0.5)",
+                backgroundColor: "var(--glass-bg)",
+                border: "1px solid var(--glass-border)",
                 color: "var(--foreground)",
               }}
               className="flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold hover:bg-opacity-70 transition-all"
@@ -132,6 +132,15 @@ export default function Home() {
               Explore Projects
               <ChevronRight className="w-4 h-4" />
             </a>
+          </motion.div>
+
+          {/* Hero Ad Placement */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <AdBanner slot="hero" className="mt-8 mb-0" />
           </motion.div>
         </div>
       </section>
