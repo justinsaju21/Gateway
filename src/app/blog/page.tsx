@@ -1,5 +1,7 @@
 import { client, queries } from "@/lib/sanity.client";
 import { BlogGridClient } from "@/components/home/BlogGridClient";
+import { BlogHeader } from "@/components/BlogHeader";
+import { AdBanner } from "@/components/ui/AdBanner";
 
 export default async function BlogPreviewPage() {
     const posts = await client.fetch(queries.myPosts);
