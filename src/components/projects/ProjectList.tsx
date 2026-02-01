@@ -178,7 +178,7 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
                             </div>
                             <h3 className="text-xl font-medium text-foreground mb-2">No Projects Found</h3>
                             <p className="text-foreground-dim max-w-md mx-auto">
-                                No projects authored by "Justin Jacob Saju" were found. Please check Sanity Studio to ensure projects are assigned to this author.
+                                No projects authored by &quot;Justin Jacob Saju&quot; were found. Please check Sanity Studio to ensure projects are assigned to this author.
                             </p>
                         </div>
                     )}
