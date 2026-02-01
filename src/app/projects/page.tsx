@@ -19,9 +19,7 @@ export default async function ProjectsPage() {
                     </p>
                 </div>
 
-                <ProjectList projects={projects} />
-
-                <div className="flex justify-center mt-16">
+                <div className="flex justify-center mb-12">
                     <a
                         href="https://projects.justinsaju.me"
                         target="_blank"
@@ -38,6 +36,8 @@ export default async function ProjectsPage() {
                         View All Community Projects
                     </a>
                 </div>
+
+                <ProjectList projects={projects} />
             </div>
         </div>
     );

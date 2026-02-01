@@ -12,10 +12,7 @@ export default async function BlogPreviewPage() {
                 <BlogHeader />
                 <AdBanner slot="after-hero" />
 
-                {/* Custom Grid using filtered posts */}
-                <BlogGridClient posts={posts} />
-
-                <div className="flex justify-center mt-16">
+                <div className="flex justify-center mb-8">
                     <a
                         href="https://blog.justinsaju.me"
                         target="_blank"
@@ -32,6 +29,9 @@ export default async function BlogPreviewPage() {
                         Read Full Blog
                     </a>
                 </div>
+
+                {/* Custom Grid using filtered posts */}
+                <BlogGridClient posts={posts} />
             </div>
         </div>
     );

@@ -176,9 +176,9 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
                             <div className="inline-block p-4 rounded-full bg-white/5 border border-white/10 mb-4">
                                 <MonitorPlay className="w-8 h-8 text-foreground-dim" />
                             </div>
-                            <h3 className="text-xl font-medium text-foreground mb-2">Projects Incoming...</h3>
+                            <h3 className="text-xl font-medium text-foreground mb-2">No Projects Found</h3>
                             <p className="text-foreground-dim max-w-md mx-auto">
-                                Connecting to the database to fetch the latest projects. If this persists, please check your connection.
+                                No projects authored by "Justin Jacob Saju" were found. Please check Sanity Studio to ensure projects are assigned to this author.
                             </p>
                         </div>
                     )}
