@@ -113,7 +113,7 @@ export const queries = {
     title,
     "slug": slug.current,
     mainImage,
-    categories[]->{title},
+    "categories": categories[]->title,
     publishedAt,
     excerpt,
     author->{name, image}
