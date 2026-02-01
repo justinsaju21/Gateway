@@ -91,6 +91,34 @@ export const queries = {
     "authors": authors[]->{name, image}
   }`,
 
+  // Get ONLY Justin's projects (limit 6)
+  myProjects: `*[_type == "project" && "justin-jacob-saju" in authors[]->slug.current] | order(date desc, _createdAt desc)[0...8] {
+    _id,
+    title,
+    "slug": slug.current,
+    description,
+    category,
+    tags,
+    github,
+    streamlit,
+    tinkercad,
+    external,
+    featured,
+    "authors": authors[]->{name, image}
+  }`,
+
+  // Get ONLY Justin's posts (limit 6)
+  myPosts: `*[_type == "post" && author->slug.current == "justin-jacob-saju"] | order(publishedAt desc)[0...6] {
+    _id,
+    title,
+    "slug": slug.current,
+    mainImage,
+    categories[]->{title},
+    publishedAt,
+    excerpt,
+    author->{name, image}
+  }`,
+
   // Get projects by category
   projectsByCategory: `*[_type == "project" && category == $category] | order(order asc) {
     _id,

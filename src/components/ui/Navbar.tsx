@@ -2,36 +2,14 @@
 
 import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, CpuIcon, Laptop2, GraduationCap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 import { ThemeToggle } from "../ThemeToggle";
 
-const ecosystemLinks = [
-  {
-    href: "/hardware",
-    label: "Hardware",
-    icon: CpuIcon,
-    description: "Embedded, VLSI & IoT"
-  },
-  {
-    href: "/software",
-    label: "Software",
-    icon: Laptop2,
-    description: "Web Apps & AI Tools"
-  },
-  {
-    href: "/learn",
-    label: "Learn",
-    icon: GraduationCap,
-    description: "Tutorials & Cheatsheets"
-  },
-];
-
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [ecosystemOpen, setEcosystemOpen] = useState(false);
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -89,68 +67,13 @@ export function Navbar() {
               >
                 Home
               </Link>
-              <a
-                href="https://projects.justinsaju.me"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/projects"
                 style={{ color: "var(--foreground-muted)" }}
                 className="text-sm font-medium hover:opacity-80 transition-opacity"
               >
                 Projects
-              </a>
-
-              {/* Ecosystem Dropdown */}
-              <div
-                className="relative group"
-                onMouseEnter={() => setEcosystemOpen(true)}
-                onMouseLeave={() => setEcosystemOpen(false)}
-              >
-                <button
-                  style={{ color: "var(--foreground-muted)" }}
-                  className="flex items-center gap-1 text-sm font-medium hover:opacity-80 transition-opacity py-4"
-                >
-                  Ecosystem
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${ecosystemOpen ? "rotate-180" : ""}`} />
-                </button>
-
-                <AnimatePresence>
-                  {ecosystemOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                      transition={{ duration: 0.2 }}
-                      style={{
-                        backgroundColor: "rgba(10, 22, 40, 0.95)",
-                        borderColor: "rgba(139, 92, 246, 0.2)",
-                        backdropFilter: "blur(20px)",
-                      }}
-                      className="absolute top-full -left-4 w-64 p-2 rounded-xl border shadow-xl flex flex-col gap-1"
-                    >
-                      {ecosystemLinks.map((link) => (
-                        <Link
-                          key={link.label}
-                          href={link.href}
-                          className="flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors group/item"
-                        >
-                          <div className="mt-1 p-1.5 rounded-md bg-accent-purple/10 text-accent-cyan group-hover/item:bg-accent-purple/20 transition-colors">
-                            <link.icon className="w-4 h-4" />
-                          </div>
-                          <div>
-                            <div style={{ color: "var(--foreground)" }} className="text-sm font-medium transition-colors">
-                              {link.label}
-                            </div>
-                            <div style={{ color: "var(--foreground-dim)" }} className="text-xs">
-                              {link.description}
-                            </div>
-                          </div>
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-
+              </Link>
               <Link
                 href="/blog"
                 style={{ color: "var(--foreground-muted)" }}
@@ -210,32 +133,14 @@ export function Navbar() {
                 >
                   Home
                 </Link>
-                <a
-                  href="https://projects.justinsaju.me"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/projects"
                   onClick={() => setMobileMenuOpen(false)}
                   style={{ color: "var(--foreground-muted)" }}
                   className="block py-2.5 px-4 hover:bg-white/5 rounded-lg transition-colors"
                 >
                   Projects
-                </a>
-
-                <div className="py-2">
-                  <span className="px-4 text-xs font-semibold text-accent-cyan uppercase tracking-wider">Ecosystem</span>
-                  {ecosystemLinks.map((link) => (
-                    <Link
-                      key={link.label}
-                      href={link.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      style={{ color: "var(--foreground-muted)" }}
-                      className="flex items-center gap-2 py-2.5 px-4 hover:bg-white/5 rounded-lg transition-colors"
-                    >
-                      <link.icon className="w-4 h-4" />
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
+                </Link>
 
                 <Link
                   href="/blog"
