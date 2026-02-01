@@ -1,3 +1,6 @@
+// Revalidate every 60 seconds
+export const revalidate = 60;
+
 import { client, queries } from "@/lib/sanity.client";
 import { BlogGridClient } from "@/components/home/BlogGridClient";
 import { BlogHeader } from "@/components/BlogHeader";
