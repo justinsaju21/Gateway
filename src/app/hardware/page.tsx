@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Cpu, ChevronRight, CircuitBoard, Wifi, Zap, Thermometer, Music, Box } from "lucide-react";
 import { AdBanner } from "@/components/ui/AdBanner";
-import Link from "next/link";
 import { TiltCard } from "@/components/ui/tilt-card";
 
 interface HardwareProject {

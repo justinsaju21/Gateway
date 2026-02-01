@@ -9,6 +9,7 @@ import { urlFor } from "@/lib/sanity.client";
 
 interface Author {
     name: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     image: any;
 }
 
@@ -29,8 +30,7 @@ interface Project {
 }
 
 export default function ProjectList({ projects }: { projects: Project[] }) {
-    // Helper to determine status if not explicitly in data (optional)
-    const getStatus = (p: Project) => p.featured ? "Featured" : "Live";
+
 
     return (
         <div className="min-h-screen pt-32 pb-20 px-6 bg-[var(--background)]">

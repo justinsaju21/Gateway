@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap, ChevronRight, BookOpen, Calculator, Cpu, Play, Github, ExternalLink } from "lucide-react";
+import { GraduationCap, ChevronRight, BookOpen, Calculator, Cpu } from "lucide-react";
 import { AdBanner } from "@/components/ui/AdBanner";
 import Link from "next/link";
 import { TiltCard } from "@/components/ui/tilt-card";

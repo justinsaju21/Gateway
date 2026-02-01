@@ -39,9 +39,9 @@ export function Newsletter() {
             setEmail("");
 
         } catch (_error) {
-            setStatus('error');
-            setMessage('Failed to subscribe. Please try again.');
-        }
+            setStatus("error");
+            setMessage("Something went wrong. Please try again.");
+        } finally { }
     };
 
     return (

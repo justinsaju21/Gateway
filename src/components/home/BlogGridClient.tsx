@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Calendar, ArrowRight, Pen } from "lucide-react";
-import Link from "next/link";
 import type { Post } from "@/lib/sanity.types";
 
 const categoryColors: Record<string, string> = {
