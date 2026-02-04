@@ -1,6 +1,7 @@
 export const revalidate = 60; // Revalidate every 60 seconds
 
 import { client, queries } from "@/lib/sanity.client";
+import { AdBanner } from "@/components/ui/AdBanner";
 import ProjectList from "@/components/projects/ProjectList";
 
 export default async function ProjectsPage() {
@@ -36,6 +37,8 @@ export default async function ProjectsPage() {
                         View All Community Projects
                     </a>
                 </div>
+
+                <AdBanner slot="projects-hero-bottom" className="mb-12" />
 
                 <ProjectList projects={projects} />
             </div>

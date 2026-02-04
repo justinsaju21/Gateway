@@ -13,8 +13,6 @@ export default async function BlogPreviewPage() {
         <div className="min-h-screen pt-32 pb-20 px-6" style={{ backgroundColor: "var(--background)" }}>
             <div className="max-w-5xl mx-auto">
                 <BlogHeader />
-                <AdBanner slot="after-hero" />
-
                 <div className="flex justify-center mb-8">
                     <a
                         href="https://blog.justinsaju.me"
@@ -32,6 +30,8 @@ export default async function BlogPreviewPage() {
                         Read Full Blog
                     </a>
                 </div>
+
+                <AdBanner slot="after-hero" className="mb-12" />
 
                 {/* Custom Grid using filtered posts */}
                 <BlogGridClient posts={posts} />
