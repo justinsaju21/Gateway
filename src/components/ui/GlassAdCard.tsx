@@ -12,10 +12,10 @@ export function GlassAdCard({ className = "", format = "auto" }: GlassAdCardProp
         <TiltCard
             className={`p-6 rounded-2xl flex flex-col relative overflow-hidden group ${className}`}
             style={{
-                backgroundColor: "rgba(30, 27, 75, 0.6)",
-                border: "1px solid rgba(139, 92, 246, 0.3)",
-                boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-                backdropFilter: "blur(12px)",
+                backgroundColor: "rgba(255, 255, 255, 0.03)",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                backdropFilter: "blur(16px)",
             }}
         >
             {/* Ad Label - Critical for Policy Compliance */}

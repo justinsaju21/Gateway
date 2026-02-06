@@ -174,30 +174,30 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="block h-full w-full p-8 group relative overflow-hidden rounded-2xl"
                   style={{
-                    backgroundColor: "rgba(30, 27, 75, 0.6)",
-                    border: "1px solid rgba(139, 92, 246, 0.3)",
-                    boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-                    backdropFilter: "blur(12px)",
+                    backgroundColor: "rgba(255, 255, 255, 0.03)",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                    backdropFilter: "blur(16px)",
                   }}
                 >
                   <div className="relative z-10 flex flex-col h-full justify-between">
                     <div className="flex justify-between items-start">
-                      <CpuIcon className="w-10 h-10 transition-colors duration-300 group-hover:text-[#a78bfa]" style={{ color: "#a78bfa" }} />
+                      <CpuIcon className="w-10 h-10 transition-colors duration-300 group-hover:text-[#a78bfa]" style={{ color: "rgba(255, 255, 255, 0.8)" }} />
                       <ChevronRight
                         className="w-6 h-6 group-hover:translate-x-1 transition-all"
-                        style={{ color: "var(--foreground-dim)" }}
+                        style={{ color: "rgba(255, 255, 255, 0.5)" }}
                       />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold mb-2" style={{ color: "var(--foreground)" }}>The Developer</h3>
-                      <p style={{ color: "var(--foreground-muted)" }}>
+                      <h3 className="text-2xl font-bold mb-2" style={{ color: "#ffffff" }}>The Developer</h3>
+                      <p style={{ color: "rgba(255, 255, 255, 0.7)" }}>
                         Professional portfolio, resume, and detailed case studies.
                         Embedded Systems, VLSI, and AI.
                       </p>
                     </div>
                   </div>
                   {/* Hover Gradient Background */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#a78bfa]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </Link>
               </TiltCard>
             </motion.div>
@@ -214,22 +214,22 @@ export default function Home() {
                   href="/blog"
                   className="block h-full w-full p-6 group relative rounded-2xl"
                   style={{
-                    backgroundColor: "rgba(30, 27, 75, 0.6)",
-                    border: "1px solid rgba(139, 92, 246, 0.3)",
-                    boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-                    backdropFilter: "blur(12px)",
+                    backgroundColor: "rgba(255, 255, 255, 0.03)",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                    backdropFilter: "blur(16px)",
                   }}
                 >
                   <div className="relative z-10 flex flex-col h-full justify-between h-[200px]">
-                    <BookOpenIcon className="w-8 h-8 transition-colors duration-300 group-hover:text-[#c084fc]" style={{ color: "#c084fc" }} />
+                    <BookOpenIcon className="w-8 h-8 transition-colors duration-300 group-hover:text-[#c084fc]" style={{ color: "rgba(255, 255, 255, 0.8)" }} />
                     <div>
-                      <h3 className="text-xl font-bold mb-1" style={{ color: "var(--foreground)" }}>The Writer</h3>
-                      <p className="text-sm" style={{ color: "var(--foreground-muted)" }}>
+                      <h3 className="text-xl font-bold mb-1" style={{ color: "#ffffff" }}>The Writer</h3>
+                      <p className="text-sm" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
                         Technical articles & tutorials on engineering.
                       </p>
                     </div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#c084fc]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </Link>
               </TiltCard>
             </motion.div>
@@ -260,16 +260,16 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="block h-full w-full p-6 group relative rounded-2xl"
                   style={{
-                    backgroundColor: "rgba(30, 27, 75, 0.6)",
-                    border: "1px solid rgba(139, 92, 246, 0.3)",
-                    boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-                    backdropFilter: "blur(12px)",
+                    backgroundColor: "rgba(255, 255, 255, 0.03)",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                    backdropFilter: "blur(16px)",
                   }}
                 >
                   <div className="relative z-10 h-full h-[200px]">
                     <GithubStats />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#8b5cf6]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </Link>
               </TiltCard>
             </motion.div>
@@ -289,22 +289,22 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="block h-full w-full p-6 group relative rounded-2xl"
                   style={{
-                    backgroundColor: "rgba(30, 27, 75, 0.6)",
-                    border: "1px solid rgba(139, 92, 246, 0.3)",
-                    boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-                    backdropFilter: "blur(12px)",
+                    backgroundColor: "rgba(255, 255, 255, 0.03)",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                    backdropFilter: "blur(16px)",
                   }}
                 >
                   <div className="relative z-10 flex flex-col h-full justify-between h-[200px]">
-                    <RocketIcon className="w-8 h-8 transition-colors duration-300 group-hover:text-[#7c3aed]" style={{ color: "#7c3aed" }} />
+                    <RocketIcon className="w-8 h-8 transition-colors duration-300 group-hover:text-[#7c3aed]" style={{ color: "rgba(255, 255, 255, 0.8)" }} />
                     <div>
-                      <h3 className="text-xl font-bold mb-1" style={{ color: "var(--foreground)" }}>Projects Hub</h3>
-                      <p className="text-sm" style={{ color: "var(--foreground-muted)" }}>
+                      <h3 className="text-xl font-bold mb-1" style={{ color: "#ffffff" }}>Projects Hub</h3>
+                      <p className="text-sm" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
                         Demos, experiments, and live project showcases.
                       </p>
                     </div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#7c3aed]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </a>
               </TiltCard>
             </motion.div>
@@ -321,22 +321,22 @@ export default function Home() {
                   href="mailto:justinsaju21@gmail.com"
                   className="block h-full w-full p-6 group relative rounded-2xl"
                   style={{
-                    backgroundColor: "rgba(30, 27, 75, 0.6)",
-                    border: "1px solid rgba(139, 92, 246, 0.3)",
-                    boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-                    backdropFilter: "blur(12px)",
+                    backgroundColor: "rgba(255, 255, 255, 0.03)",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                    backdropFilter: "blur(16px)",
                   }}
                 >
                   <div className="relative z-10 flex flex-col h-full justify-between h-[200px]">
-                    <MailIcon className="w-8 h-8 transition-colors duration-300 group-hover:text-[#a78bfa]" style={{ color: "#a78bfa" }} />
+                    <MailIcon className="w-8 h-8 transition-colors duration-300 group-hover:text-[#a78bfa]" style={{ color: "rgba(255, 255, 255, 0.8)" }} />
                     <div>
-                      <h3 className="text-xl font-bold mb-1" style={{ color: "var(--foreground)" }}>Get In Touch</h3>
-                      <p className="text-sm" style={{ color: "var(--foreground-muted)" }}>
+                      <h3 className="text-xl font-bold mb-1" style={{ color: "#ffffff" }}>Get In Touch</h3>
+                      <p className="text-sm" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
                         Have a project idea? Let&apos;s collaborate.
                       </p>
                     </div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#a78bfa]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </Link>
               </TiltCard>
             </motion.div>
