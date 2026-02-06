@@ -172,25 +172,18 @@ export default function Home() {
                   href="https://portfolio.justinsaju.me"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block h-full w-full p-8 group relative overflow-hidden rounded-2xl"
-                  style={{
-                    backgroundColor: "rgba(255, 255, 255, 0.03)",
-                    border: "1px solid rgba(255, 255, 255, 0.1)",
-                    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-                    backdropFilter: "blur(16px)",
-                  }}
+                  className="block h-full w-full p-8 group relative overflow-hidden rounded-2xl glass-card"
                 >
                   <div className="relative z-10 flex flex-col h-full justify-between">
                     <div className="flex justify-between items-start">
-                      <CpuIcon className="w-10 h-10 transition-colors duration-300 group-hover:text-[#a78bfa]" style={{ color: "rgba(255, 255, 255, 0.8)" }} />
+                      <CpuIcon className="w-10 h-10 transition-colors duration-300 text-[var(--foreground)] group-hover:text-[#a78bfa]" />
                       <ChevronRight
-                        className="w-6 h-6 group-hover:translate-x-1 transition-all"
-                        style={{ color: "rgba(255, 255, 255, 0.5)" }}
+                        className="w-6 h-6 text-[var(--foreground-dim)] group-hover:translate-x-1 transition-all"
                       />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold mb-2" style={{ color: "#ffffff" }}>The Developer</h3>
-                      <p style={{ color: "rgba(255, 255, 255, 0.7)" }}>
+                      <h3 className="text-2xl font-bold mb-2 text-[var(--foreground)]">The Developer</h3>
+                      <p className="text-[var(--foreground-muted)]">
                         Professional portfolio, resume, and detailed case studies.
                         Embedded Systems, VLSI, and AI.
                       </p>
@@ -212,19 +205,13 @@ export default function Home() {
               <TiltCard>
                 <Link
                   href="/blog"
-                  className="block h-full w-full p-6 group relative rounded-2xl"
-                  style={{
-                    backgroundColor: "rgba(255, 255, 255, 0.03)",
-                    border: "1px solid rgba(255, 255, 255, 0.1)",
-                    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-                    backdropFilter: "blur(16px)",
-                  }}
+                  className="block h-full w-full p-6 group relative rounded-2xl glass-card"
                 >
                   <div className="relative z-10 flex flex-col h-full justify-between h-[200px]">
-                    <BookOpenIcon className="w-8 h-8 transition-colors duration-300 group-hover:text-[#c084fc]" style={{ color: "rgba(255, 255, 255, 0.8)" }} />
+                    <BookOpenIcon className="w-8 h-8 transition-colors duration-300 text-[var(--foreground)] group-hover:text-[#c084fc]" />
                     <div>
-                      <h3 className="text-xl font-bold mb-1" style={{ color: "#ffffff" }}>The Writer</h3>
-                      <p className="text-sm" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
+                      <h3 className="text-xl font-bold mb-1 text-[var(--foreground)]">The Writer</h3>
+                      <p className="text-sm text-[var(--foreground-muted)]">
                         Technical articles & tutorials on engineering.
                       </p>
                     </div>
@@ -258,13 +245,7 @@ export default function Home() {
                   href="https://github.com/justinsaju21"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block h-full w-full p-6 group relative rounded-2xl"
-                  style={{
-                    backgroundColor: "rgba(255, 255, 255, 0.03)",
-                    border: "1px solid rgba(255, 255, 255, 0.1)",
-                    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-                    backdropFilter: "blur(16px)",
-                  }}
+                  className="block h-full w-full p-6 group relative rounded-2xl glass-card"
                 >
                   <div className="relative z-10 h-full h-[200px]">
                     <GithubStats />
@@ -287,20 +268,14 @@ export default function Home() {
                   href="https://projects.justinsaju.me"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block h-full w-full p-6 group relative rounded-2xl"
-                  style={{
-                    backgroundColor: "rgba(255, 255, 255, 0.03)",
-                    border: "1px solid rgba(255, 255, 255, 0.1)",
-                    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-                    backdropFilter: "blur(16px)",
-                  }}
+                  className="block h-full w-full p-6 group relative rounded-2xl glass-card"
                 >
                   <div className="relative z-10 flex flex-col h-full justify-between h-[200px]">
-                    <RocketIcon className="w-8 h-8 transition-colors duration-300 group-hover:text-[#7c3aed]" style={{ color: "rgba(255, 255, 255, 0.8)" }} />
+                    <RocketIcon className="w-8 h-8 transition-colors duration-300 text-[var(--foreground)] group-hover:text-[#7c3aed]" />
                     <div>
-                      <h3 className="text-xl font-bold mb-1" style={{ color: "#ffffff" }}>Projects Hub</h3>
-                      <p className="text-sm" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
-                        Demos, experiments, and live project showcases.
+                      <h3 className="text-xl font-bold mb-1 text-[var(--foreground)]">Projects Hub</h3>
+                      <p className="text-sm text-[var(--foreground-muted)]">
+                        A showcase of my technical projects and experiments.
                       </p>
                     </div>
                   </div>

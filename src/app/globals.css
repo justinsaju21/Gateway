@@ -34,9 +34,9 @@
   /* Indigo-950: Visibly lighter than bg */
 
   /* Glassmorphism */
-  --glass-bg: rgba(30, 27, 75, 0.7);
-  /* More opaque, slightly lighter purple */
-  --glass-border: rgba(139, 92, 246, 0.5);
+  /* Glassmorphism - White-ish Glass for Premium Feel */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
   /* Stronger border for separation */
 
   /* Gradients */

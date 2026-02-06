@@ -10,13 +10,7 @@ interface GlassAdCardProps {
 export function GlassAdCard({ className = "", format = "auto" }: GlassAdCardProps) {
     return (
         <TiltCard
-            className={`p-6 rounded-2xl flex flex-col relative overflow-hidden group ${className}`}
-            style={{
-                backgroundColor: "rgba(255, 255, 255, 0.03)",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
-                boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-                backdropFilter: "blur(16px)",
-            }}
+            className={`glass-card p-6 rounded-2xl flex flex-col relative overflow-hidden group ${className}`}
         >
             {/* Ad Label - Critical for Policy Compliance */}
             <div className="absolute top-3 left-3 bg-black/40 px-2 py-0.5 rounded text-[10px] font-bold tracking-wider text-white/50 border border-white/10 z-20">
