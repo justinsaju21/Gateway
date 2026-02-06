@@ -7,9 +7,11 @@ import { cn } from "@/lib/utils";
 export const TiltCard = ({
     children,
     className,
+    style,
 }: {
     children: React.ReactNode;
     className?: string;
+    style?: React.CSSProperties;
 }) => {
     const ref = useRef<HTMLDivElement>(null);
 
@@ -44,6 +46,7 @@ export const TiltCard = ({
                 rotateY,
                 rotateX,
                 transformStyle: "preserve-3d",
+                ...style,
             }}
             className={cn("relative w-full h-full", className)}
         >
