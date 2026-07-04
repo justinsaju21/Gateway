@@ -15,22 +15,22 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundColor: "var(--background)" }}>
-          {/* Main Purple Glow - Top Left */}
+          {/* Main Red Glow - Top Left */}
           <div
             className="absolute top-[-20%] left-[-20%] w-[800px] h-[800px] rounded-full blur-[180px] opacity-30"
-            style={{ backgroundColor: "#7c3aed" }}
+            style={{ backgroundColor: "#CD1C18" }}
           />
 
-          {/* Secondary Blue/Purple Glow - Bottom Right */}
+          {/* Secondary Dark Red Glow - Bottom Right */}
           <div
             className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full blur-[150px] opacity-25"
-            style={{ backgroundColor: "#8b5cf6" }}
+            style={{ backgroundColor: "#9B1313" }}
           />
 
           {/* Center subtle glow */}
           <div
             className="absolute top-[30%] left-[50%] -translate-x-[50%] w-[800px] h-[400px] rounded-full blur-[150px] opacity-15"
-            style={{ backgroundColor: "#a78bfa" }}
+            style={{ backgroundColor: "#FFA896" }}
           />
 
           {/* Grid Overlay */}
@@ -44,15 +44,15 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             style={{
-              border: "1px solid rgba(124, 58, 237, 0.3)",
-              backgroundColor: "rgba(30, 27, 75, 0.3)",
+              border: "1px solid rgba(205, 28, 24, 0.3)",
+              backgroundColor: "rgba(30, 0, 10, 0.3)",
               backdropFilter: "blur(8px)",
             }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-8"
           >
             <span
               className="flex h-2 w-2 rounded-full"
-              style={{ backgroundColor: "#a78bfa" }}
+              style={{ backgroundColor: "#FFA896" }}
             />
             <span
               style={{ color: "var(--foreground-muted)" }}
@@ -73,11 +73,11 @@ export default function Home() {
             <span
               className="inline-block"
               style={{
-                background: "linear-gradient(135deg, #c084fc 0%, #7c3aed 100%)",
+                background: "linear-gradient(135deg, #CD1C18 0%, #9B1313 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
-                filter: "drop-shadow(0 0 30px rgba(124, 58, 237, 0.3))",
+                filter: "drop-shadow(0 0 30px rgba(205, 28, 24, 0.3))",
               }}
             >
               The Gateway
@@ -93,9 +93,9 @@ export default function Home() {
             style={{ color: "var(--foreground-dim)" }}
           >
             Welcome to my digital hub. Explore my{" "}
-            <span style={{ color: "#a78bfa", fontWeight: 500 }}>portfolio</span>,{" "}
-            <span style={{ color: "#7c3aed", fontWeight: 500 }}>blog</span>, and{" "}
-            <span style={{ color: "#c084fc", fontWeight: 500 }}>projects</span>.
+            <span style={{ color: "#FFA896", fontWeight: 500 }}>portfolio</span>,{" "}
+            <span style={{ color: "#CD1C18", fontWeight: 500 }}>blog</span>, and{" "}
+            <span style={{ color: "#9B1313", fontWeight: 500 }}>projects</span>.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -110,9 +110,9 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                backgroundColor: "#7c3aed",
+                backgroundColor: "var(--accent-cyan)",
                 color: "#ffffff",
-                boxShadow: "0 0 30px -5px rgba(124, 58, 237, 0.6)",
+                boxShadow: "0 0 30px -5px rgba(205, 28, 24, 0.6)",
               }}
               className="px-8 py-3.5 rounded-full font-semibold transition-all hover:scale-105"
             >
@@ -176,7 +176,7 @@ export default function Home() {
                 >
                   <div className="relative z-10 flex flex-col h-full justify-between">
                     <div className="flex justify-between items-start">
-                      <CpuIcon className="w-10 h-10 transition-colors duration-300 text-[var(--foreground)] group-hover:text-[#a78bfa]" />
+                      <CpuIcon className="w-10 h-10 transition-colors duration-300 text-[var(--foreground)] group-hover:text-[#FFA896]" />
                       <ChevronRight
                         className="w-6 h-6 text-[var(--foreground-dim)] group-hover:translate-x-1 transition-all"
                       />
@@ -208,7 +208,7 @@ export default function Home() {
                   className="block h-full w-full p-6 group relative rounded-2xl glass-card"
                 >
                   <div className="relative z-10 flex flex-col h-full justify-between h-[200px]">
-                    <BookOpenIcon className="w-8 h-8 transition-colors duration-300 text-[var(--foreground)] group-hover:text-[#c084fc]" />
+                    <BookOpenIcon className="w-8 h-8 transition-colors duration-300 text-[var(--foreground)] group-hover:text-[#CD1C18]" />
                     <div>
                       <h3 className="text-xl font-bold mb-1 text-[var(--foreground)]">The Writer</h3>
                       <p className="text-sm text-[var(--foreground-muted)]">
@@ -271,7 +271,7 @@ export default function Home() {
                   className="block h-full w-full p-6 group relative rounded-2xl glass-card"
                 >
                   <div className="relative z-10 flex flex-col h-full justify-between h-[200px]">
-                    <RocketIcon className="w-8 h-8 transition-colors duration-300 text-[var(--foreground)] group-hover:text-[#7c3aed]" />
+                    <RocketIcon className="w-8 h-8 transition-colors duration-300 text-[var(--foreground)] group-hover:text-[#CD1C18]" />
                     <div>
                       <h3 className="text-xl font-bold mb-1 text-[var(--foreground)]">Projects Hub</h3>
                       <p className="text-sm text-[var(--foreground-muted)]">
@@ -303,11 +303,47 @@ export default function Home() {
                   }}
                 >
                   <div className="relative z-10 flex flex-col h-full justify-between h-[200px]">
-                    <MailIcon className="w-8 h-8 transition-colors duration-300 group-hover:text-[#a78bfa]" style={{ color: "rgba(255, 255, 255, 0.8)" }} />
+                    <MailIcon className="w-8 h-8 transition-colors duration-300 group-hover:text-[#FFA896]" style={{ color: "rgba(255, 255, 255, 0.8)" }} />
                     <div>
                       <h3 className="text-xl font-bold mb-1" style={{ color: "#ffffff" }}>Get In Touch</h3>
                       <p className="text-sm" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
                         Have a project idea? Let&apos;s collaborate.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </Link>
+              </TiltCard>
+            </motion.div>
+
+            {/* Card 6: Photography Preview */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.55 }}
+              className="md:col-span-1"
+            >
+              <TiltCard>
+                <Link
+                  href="/photography"
+                  className="block h-full w-full p-6 group relative rounded-2xl glass-card overflow-hidden"
+                >
+                  <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-opacity duration-700 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000&auto=format&fit=crop')" }} />
+                  <div className="relative z-10 flex flex-col h-full justify-between h-[200px]">
+                    <div className="flex justify-between items-start">
+                      <svg className="w-8 h-8 transition-colors duration-300 text-[var(--foreground)] group-hover:text-[#FFA896]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      <ChevronRight
+                        className="w-5 h-5 text-[var(--foreground-dim)] group-hover:translate-x-1 transition-all"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-1 text-[var(--foreground)]">Photography</h3>
+                      <p className="text-sm text-[var(--foreground-muted)]">
+                        My visual journal and captured moments.
                       </p>
                     </div>
                   </div>

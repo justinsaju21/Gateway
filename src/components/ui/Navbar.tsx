@@ -31,7 +31,7 @@ export function Navbar() {
             backgroundColor: isScrolled ? "var(--glass-bg)" : "transparent",
             backdropFilter: isScrolled ? "blur(16px)" : "none",
             border: isScrolled ? "1px solid var(--glass-border)" : "none",
-            boxShadow: isScrolled ? "0 0 40px -10px rgba(124, 58, 237, 0.15)" : "none",
+            boxShadow: isScrolled ? "0 0 40px -10px rgba(205, 28, 24, 0.15)" : "none",
             paddingTop: isScrolled ? "0" : "1rem",
           }}
           className="pointer-events-auto transition-all duration-500 ease-out"
@@ -81,6 +81,13 @@ export function Navbar() {
               >
                 Blog
               </Link>
+              <Link
+                href="/photography"
+                style={{ color: "var(--foreground-muted)" }}
+                className="text-sm font-medium hover:opacity-80 transition-opacity"
+              >
+                Photography
+              </Link>
               <ThemeToggle />
             </div>
 
@@ -93,7 +100,7 @@ export function Navbar() {
                 style={{
                   backgroundColor: "var(--accent-cyan)",
                   color: "#ffffff",
-                  boxShadow: "0 0 20px -5px rgba(124, 58, 237, 0.5)",
+                  boxShadow: "0 0 20px -5px rgba(205, 28, 24, 0.5)",
                 }}
                 className="flex items-center gap-1.5 px-6 py-2.5 rounded-full text-sm font-semibold transition-all hover:opacity-90"
               >
@@ -152,9 +159,18 @@ export function Navbar() {
                 </Link>
 
                 <Link
+                  href="/photography"
+                  onClick={() => setMobileMenuOpen(false)}
+                  style={{ color: "var(--foreground-muted)" }}
+                  className="block py-2.5 px-4 hover:bg-white/5 rounded-lg transition-colors"
+                >
+                  Photography
+                </Link>
+
+                <Link
                   href="https://portfolio.justinsaju.me"
                   onClick={() => setMobileMenuOpen(false)}
-                  style={{ backgroundColor: "#7c3aed", color: "#ffffff" }}
+                  style={{ backgroundColor: "var(--accent-cyan)", color: "#ffffff" }}
                   className="block py-2.5 px-4 mt-4 font-semibold rounded-lg text-center"
                 >
                   Portfolio
