@@ -3,7 +3,7 @@
 
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
-import { FluidParticles } from "./FluidParticles";
+import SoftAurora from "./SoftAurora";
 
 export function HeroSection() {
     return (
@@ -23,8 +23,22 @@ export function HeroSection() {
                 <div className="absolute inset-0 bg-grid opacity-[0.03]" />
             </div>
 
-            {/* Interactive Fluid Particles Background */}
-            <FluidParticles />
+            <SoftAurora
+              speed={0.6}
+              scale={1.5}
+              brightness={1.0}
+              color1="#7c3aed"
+              color2="#3b82f6"
+              noiseFrequency={2.5}
+              noiseAmplitude={1.0}
+              bandHeight={0.5}
+              bandSpread={1.0}
+              octaveDecay={0.1}
+              layerOffset={0}
+              colorSpeed={1.0}
+              enableMouseInteraction={true}
+              mouseInfluence={0.25}
+            />
 
           <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20">
                 {/* Main Title */}
