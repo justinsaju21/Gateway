@@ -3,23 +3,27 @@
 
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+import { FluidParticles } from "./FluidParticles";
 
 export function HeroSection() {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+            {/* Interactive Fluid Particles Background */}
+            <FluidParticles />
+            
             {/* Animated Background */}
-            <div className="absolute inset-0 pointer-events-none bg-background">
+            <div className="absolute inset-0 pointer-events-none bg-background opacity-80 z-0">
                 {/* Main Purple Glow - Top Left */}
-                <div className="absolute top-[-20%] left-[-20%] w-[800px] h-[800px] bg-accent-purple rounded-full blur-[180px] opacity-20" />
+                <div className="absolute top-[-20%] left-[-20%] w-[800px] h-[800px] bg-accent-purple rounded-full blur-[180px] opacity-10" />
 
                 {/* Secondary Blue/Purple Glow - Bottom Right */}
-                <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-accent-blue rounded-full blur-[150px] opacity-20" />
+                <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-accent-blue rounded-full blur-[150px] opacity-10" />
 
                 {/* Center subtle glow */}
-                <div className="absolute top-[30%] left-[50%] -translate-x-[50%] w-[800px] h-[400px] bg-accent-purple rounded-full blur-[150px] opacity-10" />
+                <div className="absolute top-[30%] left-[50%] -translate-x-[50%] w-[800px] h-[400px] bg-accent-purple rounded-full blur-[150px] opacity-5" />
 
                 {/* Grid Overlay */}
-                <div className="absolute inset-0 bg-grid opacity-[0.05]" />
+                <div className="absolute inset-0 bg-grid opacity-[0.03]" />
             </div>
 
           <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20">
