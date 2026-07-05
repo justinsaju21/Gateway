@@ -92,6 +92,20 @@ export function Navbar() {
 
             {/* Right Actions */}
             <div className="hidden md:flex items-center gap-4">
+              <Link
+                href="https://portfolio.justinsaju.me"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-1.5 rounded-full text-sm font-medium transition-all"
+                style={{
+                  backgroundColor: "rgba(124, 58, 237, 0.1)",
+                  color: "#C084FC",
+                  border: "1px solid rgba(124, 58, 237, 0.2)",
+                  boxShadow: "0 0 20px -5px rgba(124, 58, 237, 0.3)",
+                }}
+              >
+                Portfolio
+              </Link>
               <ThemeToggle />
             </div>
 

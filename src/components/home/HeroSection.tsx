@@ -22,20 +22,7 @@ export function HeroSection() {
                 <div className="absolute inset-0 bg-grid opacity-[0.05]" />
             </div>
 
-            <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20">
-                {/* Badge */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-8 border border-accent-purple/30 bg-midnight-light/30 backdrop-blur-sm"
-                >
-                    <span className="flex h-2 w-2 rounded-full bg-accent-cyan"></span>
-                    <span className="text-foreground-muted text-xs font-semibold tracking-wide uppercase">
-                        SRM IST KTR • Engineering Student
-                    </span>
-                </motion.div>
-
+          <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20">
                 {/* Main Title */}
                 <motion.h1
                     initial={{ opacity: 0, y: 30 }}

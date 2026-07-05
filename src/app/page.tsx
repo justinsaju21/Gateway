@@ -151,14 +151,14 @@ export default function Home() {
             <span className="text-gradient">Digital Ecosystem</span>
           </motion.h2>
 
-          <div className="grid md:grid-cols-3 gap-6 auto-rows-[250px]">
-            {/* Card 1: Portfolio (Large) */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[220px]">
+            {/* Card 1: Portfolio (Large 2x2) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="md:col-span-2 md:row-span-1"
+              className="md:col-span-2 md:row-span-2"
             >
               <TiltCard>
                 <Link
@@ -167,6 +167,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="block h-full w-full p-8 group relative overflow-hidden rounded-2xl glass-card"
                 >
+                  <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-opacity duration-700 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop')" }} />
                   <div className="relative z-10 flex flex-col h-full justify-between">
                     <div className="flex justify-between items-start">
                       <CpuIcon className="w-10 h-10 transition-colors duration-300 text-[var(--text-primary)] group-hover:text-[#06B6D4]" />
@@ -175,114 +176,118 @@ export default function Home() {
                       />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold mb-2 text-[var(--text-primary)]">The Developer</h3>
-                      <p className="text-[var(--text-muted)]">
+                      <h3 className="text-3xl font-bold mb-2 text-[var(--text-primary)]">My Portfolio</h3>
+                      <p className="text-[var(--text-muted)] text-lg max-w-md">
                         Professional portfolio, resume, and detailed case studies.
                         Embedded Systems, VLSI, and AI.
                       </p>
                     </div>
                   </div>
-                  {/* Hover Gradient Background */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-0" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
                 </Link>
               </TiltCard>
             </motion.div>
 
-            {/* Card 2: Blog */}
+            {/* Card 2: Blog (1x1) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
+              className="md:col-span-1 md:row-span-1"
             >
               <TiltCard>
                 <Link
                   href="/blog"
-                  className="block h-full w-full p-6 group relative rounded-2xl glass-card"
+                  className="block h-full w-full p-6 group relative rounded-2xl glass-card overflow-hidden"
                 >
-                  <div className="relative z-10 flex flex-col h-full justify-between h-[200px]">
+                  <div className="absolute inset-0 z-0 opacity-10 group-hover:opacity-30 transition-opacity duration-700 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1000&auto=format&fit=crop')" }} />
+                  <div className="relative z-10 flex flex-col h-full justify-between">
                     <BookOpenIcon className="w-8 h-8 transition-colors duration-300 text-[var(--text-primary)] group-hover:text-[#7C3AED]" />
                     <div>
                       <h3 className="text-xl font-bold mb-1 text-[var(--text-primary)]">The Writer</h3>
-                      <p className="text-sm text-[var(--text-muted)]">
+                      <p className="text-sm text-[var(--text-muted)] line-clamp-2">
                         Technical articles & tutorials on engineering.
                       </p>
                     </div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-0" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
                 </Link>
               </TiltCard>
             </motion.div>
 
-            {/* Native Ad 1 - Styled as 'Sponsored Tool' */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.25 }}
-              className="md:col-span-1"
-            >
-              <GlassAdCard className="min-h-[250px] w-full" format="rectangle" />
-            </motion.div>
-
-            {/* Card 3: GitHub (Dynamic) */}
+            {/* Card 3: Projects Hub (1x1) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="md:col-span-2"
-            >
-              <TiltCard>
-                <Link
-                  href="https://github.com/justinsaju21"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block h-full w-full p-6 group relative rounded-2xl glass-card"
-                >
-                  <div className="relative z-10 h-full h-[200px]">
-                    <GithubStats />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                </Link>
-              </TiltCard>
-            </motion.div>
-
-            {/* Card 4: Projects Hub */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="md:col-span-1"
+              className="md:col-span-1 md:row-span-1"
             >
               <TiltCard>
                 <a
                   href="https://projects.justinsaju.me"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block h-full w-full p-6 group relative rounded-2xl glass-card"
+                  className="block h-full w-full p-6 group relative rounded-2xl glass-card overflow-hidden"
                 >
-                  <div className="relative z-10 flex flex-col h-full justify-between h-[200px]">
+                  <div className="absolute inset-0 z-0 opacity-10 group-hover:opacity-30 transition-opacity duration-700 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop')" }} />
+                  <div className="relative z-10 flex flex-col h-full justify-between">
                     <RocketIcon className="w-8 h-8 transition-colors duration-300 text-[var(--text-primary)] group-hover:text-[#7C3AED]" />
                     <div>
                       <h3 className="text-xl font-bold mb-1 text-[var(--text-primary)]">Projects Hub</h3>
-                      <p className="text-sm text-[var(--text-muted)]">
-                        A showcase of my technical projects and experiments.
+                      <p className="text-sm text-[var(--text-muted)] line-clamp-2">
+                        Showcase of technical projects and experiments.
                       </p>
                     </div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-0" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
                 </a>
               </TiltCard>
             </motion.div>
 
-            {/* Card 5: Contact */}
+            {/* Card 4: Photography Preview (1x1) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="md:col-span-1 md:row-span-1"
+            >
+              <TiltCard>
+                <Link
+                  href="/photography"
+                  className="block h-full w-full p-6 group relative rounded-2xl glass-card overflow-hidden"
+                >
+                  <div className="absolute inset-0 z-0 opacity-30 group-hover:opacity-60 transition-opacity duration-700 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000&auto=format&fit=crop')" }} />
+                  <div className="relative z-10 flex flex-col h-full justify-between">
+                    <svg className="w-8 h-8 transition-colors duration-300 text-[var(--text-primary)] group-hover:text-[#06B6D4]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <div>
+                      <h3 className="text-xl font-bold mb-1 text-[var(--text-primary)] shadow-sm">Photography</h3>
+                      <p className="text-sm text-gray-300 line-clamp-2">
+                        My visual journal and captured moments.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-0" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+                </Link>
+              </TiltCard>
+            </motion.div>
+
+            {/* Card 5: Contact (1x1) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
+              className="md:col-span-1 md:row-span-1"
             >
               <TiltCard>
                 <Link
@@ -295,7 +300,7 @@ export default function Home() {
                     backdropFilter: "blur(16px)",
                   }}
                 >
-                  <div className="relative z-10 flex flex-col h-full justify-between h-[200px]">
+                  <div className="relative z-10 flex flex-col h-full justify-between">
                     <MailIcon className="w-8 h-8 transition-colors duration-300 group-hover:text-[#06B6D4]" style={{ color: "rgba(255, 255, 255, 0.8)" }} />
                     <div>
                       <h3 className="text-xl font-bold mb-1" style={{ color: "#ffffff" }}>Get In Touch</h3>
@@ -309,51 +314,40 @@ export default function Home() {
               </TiltCard>
             </motion.div>
 
-            {/* Card 6: Photography Preview */}
+            {/* Card 6: GitHub (Dynamic 2x1) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.55 }}
-              className="md:col-span-1"
+              transition={{ delay: 0.6 }}
+              className="md:col-span-2 md:row-span-1"
             >
               <TiltCard>
                 <Link
-                  href="/photography"
+                  href="https://github.com/justinsaju21"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block h-full w-full p-6 group relative rounded-2xl glass-card overflow-hidden"
                 >
-                  <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-opacity duration-700 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000&auto=format&fit=crop')" }} />
-                  <div className="relative z-10 flex flex-col h-full justify-between h-[200px]">
-                    <div className="flex justify-between items-start">
-                      <svg className="w-8 h-8 transition-colors duration-300 text-[var(--text-primary)] group-hover:text-[#06B6D4]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                      <ChevronRight
-                        className="w-5 h-5 text-[var(--text-secondary)] group-hover:translate-x-1 transition-all"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-1 text-[var(--text-primary)]">Photography</h3>
-                      <p className="text-sm text-[var(--text-muted)]">
-                        My visual journal and captured moments.
-                      </p>
-                    </div>
+                  <div className="absolute inset-0 z-0 opacity-10 group-hover:opacity-20 transition-opacity duration-700 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=1000&auto=format&fit=crop')" }} />
+                  <div className="relative z-10 h-full flex flex-col justify-center">
+                    <GithubStats />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-black/80 to-transparent z-0" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
                 </Link>
               </TiltCard>
             </motion.div>
 
-            {/* Native Ad 2 - Mixed into grid */}
+            {/* Native Ad 1 - Styled as 'Sponsored Tool' (2x1) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.55 }}
-              className="md:col-span-1"
+              transition={{ delay: 0.7 }}
+              className="md:col-span-2 md:row-span-1"
             >
-              <GlassAdCard className="min-h-[250px] w-full" format="rectangle" />
+              <GlassAdCard className="h-full w-full" format="rectangle" />
             </motion.div>
           </div>
         </div>
