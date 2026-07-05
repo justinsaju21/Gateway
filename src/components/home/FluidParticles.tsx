@@ -17,7 +17,7 @@ export function FluidParticles() {
     let height = window.innerHeight;
     
     // Mouse interaction
-    let mouse = { x: -1000, y: -1000, radius: 150 };
+    const mouse = { x: -1000, y: -1000, radius: 150 };
 
     const handleMouseMove = (e: MouseEvent) => {
       mouse.x = e.clientX;
@@ -80,16 +80,16 @@ export function FluidParticles() {
         if (this.y < 0 || this.y > height) this.vy *= -1;
 
         // Mouse interaction (Fluid repulsion)
-        let dx = mouse.x - this.x;
-        let dy = mouse.y - this.y;
-        let distance = Math.sqrt(dx * dx + dy * dy);
-        let forceDirectionX = dx / distance;
-        let forceDirectionY = dy / distance;
+        const dx = mouse.x - this.x;
+        const dy = mouse.y - this.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        const forceDirectionX = dx / distance;
+        const forceDirectionY = dy / distance;
         
-        let maxDistance = mouse.radius;
-        let force = (maxDistance - distance) / maxDistance;
-        let directionX = forceDirectionX * force * this.density;
-        let directionY = forceDirectionY * force * this.density;
+        const maxDistance = mouse.radius;
+        const force = (maxDistance - distance) / maxDistance;
+        const directionX = forceDirectionX * force * this.density;
+        const directionY = forceDirectionY * force * this.density;
 
         if (distance < maxDistance) {
           this.x -= directionX;
@@ -118,8 +118,8 @@ export function FluidParticles() {
       particles = [];
       const numberOfParticles = (width * height) / 9000; // Responsive density
       for (let i = 0; i < numberOfParticles; i++) {
-        let x = Math.random() * width;
-        let y = Math.random() * height;
+        const x = Math.random() * width;
+        const y = Math.random() * height;
         particles.push(new Particle(x, y));
       }
     };
