@@ -31,7 +31,7 @@ export default function Home() {
             mouseInfluence={0.25}
           />
 
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20">
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20 pointer-events-none">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -103,7 +103,7 @@ export default function Home() {
                 color: "#ffffff",
                 boxShadow: "0 0 30px -5px rgba(124, 58, 237, 0.6)",
               }}
-              className="px-8 py-3.5 rounded-full font-semibold transition-all hover:scale-105"
+              className="px-8 py-3.5 rounded-full font-semibold transition-all hover:scale-105 pointer-events-auto"
             >
               View Portfolio
             </Link>
@@ -114,7 +114,7 @@ export default function Home() {
                 border: "1px solid var(--glass-border)",
                 color: "var(--text-primary)",
               }}
-              className="flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold hover:bg-white/5 transition-all"
+              className="flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold hover:bg-white/5 transition-all pointer-events-auto"
             >
               Explore Blogs
               <ChevronRight className="w-4 h-4" />
@@ -126,6 +126,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
+            className="pointer-events-auto"
           >
             <AdBanner slot="hero" className="mt-8 mb-0" />
           </motion.div>

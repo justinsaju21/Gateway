@@ -261,5 +261,5 @@ export default function SoftAurora({
     };
   }, [speed, scale, brightness, color1, color2, noiseFrequency, noiseAmplitude, bandHeight, bandSpread, octaveDecay, layerOffset, colorSpeed, enableMouseInteraction, mouseInfluence]);
 
-  return <div ref={containerRef} className="soft-aurora-container absolute inset-0 pointer-events-none z-0" />;
+  return <div ref={containerRef} className="soft-aurora-container absolute inset-0 z-0" />;
 }
