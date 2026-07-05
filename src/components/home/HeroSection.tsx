@@ -8,11 +8,8 @@ import { FluidParticles } from "./FluidParticles";
 export function HeroSection() {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-            {/* Interactive Fluid Particles Background */}
-            <FluidParticles />
-            
-            {/* Animated Background */}
-            <div className="absolute inset-0 pointer-events-none bg-background opacity-80 z-0">
+            {/* Animated Background Gradients */}
+            <div className="absolute inset-0 pointer-events-none bg-background z-0">
                 {/* Main Purple Glow - Top Left */}
                 <div className="absolute top-[-20%] left-[-20%] w-[800px] h-[800px] bg-accent-purple rounded-full blur-[180px] opacity-10" />
 
@@ -25,6 +22,9 @@ export function HeroSection() {
                 {/* Grid Overlay */}
                 <div className="absolute inset-0 bg-grid opacity-[0.03]" />
             </div>
+
+            {/* Interactive Fluid Particles Background */}
+            <FluidParticles />
 
           <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20">
                 {/* Main Title */}
