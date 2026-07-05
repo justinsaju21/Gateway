@@ -34,3 +34,5 @@ export interface Category {
   slug: string
   description: string
 }
+
+export type CursorState = 'default' | 'view' | 'artist' | 'feature' | 'link';

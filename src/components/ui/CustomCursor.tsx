@@ -75,7 +75,7 @@ export function CursorProvider({ children }: { children: React.ReactNode }) {
       document.removeEventListener('mousedown', onMouseDown)
       document.removeEventListener('mouseup', onMouseUp)
     }
-  }, [isMobile, mouseX, mouseY])
+  }, [isMobile, mouseX, mouseY, cursorState])
 
   const getLabel = () => {
     switch (cursorState) {
