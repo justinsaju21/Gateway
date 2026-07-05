@@ -7,35 +7,29 @@ import { TiltCard } from "@/components/ui/tilt-card";
 import { GithubStats } from "@/components/ui/GithubStats";
 import { AdBanner } from "@/components/ui/AdBanner";
 import { GlassAdCard } from "@/components/ui/GlassAdCard";
+import SoftAurora from "@/components/home/SoftAurora";
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 pointer-events-none" style={{ backgroundColor: "var(--background)" }}>
-          {/* Main Glow - Top Left */}
-          <div
-            className="absolute top-[-20%] left-[-20%] w-[800px] h-[800px] rounded-full blur-[180px] opacity-30"
-            style={{ backgroundColor: "rgba(124, 58, 237, 0.2)" }}
+          <SoftAurora
+            speed={0.6}
+            scale={1.5}
+            brightness={1.0}
+            color1="#7c3aed"
+            color2="#3b82f6"
+            noiseFrequency={2.5}
+            noiseAmplitude={1.0}
+            bandHeight={0.5}
+            bandSpread={1.0}
+            octaveDecay={0.1}
+            layerOffset={0}
+            colorSpeed={1.0}
+            enableMouseInteraction={true}
+            mouseInfluence={0.25}
           />
-
-          {/* Secondary Glow - Bottom Right */}
-          <div
-            className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full blur-[150px] opacity-25"
-            style={{ backgroundColor: "rgba(6, 182, 212, 0.15)" }}
-          />
-
-          {/* Center subtle glow */}
-          <div
-            className="absolute top-[30%] left-[50%] -translate-x-[50%] w-[800px] h-[400px] rounded-full blur-[150px] opacity-15"
-            style={{ backgroundColor: "rgba(124, 58, 237, 0.15)" }}
-          />
-
-          {/* Grid Overlay */}
-          <div className="absolute inset-0 bg-grid opacity-[0.05]" />
-        </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20">
           {/* Badge */}
