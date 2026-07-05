@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
+import { CursorProvider } from "@/components/ui/CustomCursor";
 import GoogleAdsense from "@/components/GoogleAdsense";
 
 const geistSans = Geist({
@@ -16,13 +17,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Justin Jacob Saju | Engineering Ideas & Tech Insights",
-  description: "Exploring embedded systems, VLSI, 5G communications, and AI-driven solutions. A blog by Justin Jacob Saju, engineering student at SRM IST KTR.",
-  keywords: ["engineering", "embedded systems", "VLSI", "5G", "AI", "technology", "SRM IST", "blog"],
+  title: "ECHO System | Justin Jacob Saju",
+  description: "Exploring embedded systems, VLSI, 5G communications, and AI-driven solutions. The central hub for all projects, blogs, and photography.",
+  keywords: ["engineering", "embedded systems", "VLSI", "5G", "AI", "technology", "SRM IST", "blog", "portfolio"],
   authors: [{ name: "Justin Jacob Saju" }],
   openGraph: {
-    title: "Justin Jacob Saju | Engineering Ideas & Tech Insights",
-    description: "Exploring embedded systems, VLSI, 5G communications, and AI-driven solutions.",
+    title: "ECHO System | Justin Jacob Saju",
+    description: "The central digital hub for all projects, blogs, and photography by Justin Jacob Saju.",
     type: "website",
   },
   other: {
@@ -44,9 +45,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
+          <CursorProvider>
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </CursorProvider>
         </ThemeProvider>
         <GoogleAdsense pId="ca-pub-6510223775923718" />
       </body>

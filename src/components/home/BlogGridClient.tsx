@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Calendar, ArrowRight, Pen } from "lucide-react";
-import type { Post } from "@/lib/sanity.types";
+import type { Post } from "@/types";
 
 const categoryColors: Record<string, string> = {
     Embedded: "bg-accent-cyan/20 text-accent-cyan border-accent-cyan/30",
@@ -65,14 +65,14 @@ export function BlogGridClient({ posts }: BlogGridClientProps) {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {posts.map((post, index) => (
                                 <motion.article
-                                    key={post._id}
+                                    key={post.id}
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5, delay: index * 0.1 }}
                                 >
                                     <a
-                                        href={`https://blog.justinsaju.me/blog/${post.slug?.current || ""}`}
+                                        href={`https://blog.justinsaju.me/blog/${post.slug || ""}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
@@ -83,16 +83,13 @@ export function BlogGridClient({ posts }: BlogGridClientProps) {
                                             <div className="relative z-10">
                                                 {/* Category Badges */}
                                                 <div className="flex flex-wrap gap-2 mb-5">
-                                                    {(post.categories || ["General"]).map((cat: string) => (
-                                                        <span
-                                                            key={cat}
-                                                            className={`inline-block px-3 py-1 rounded-full text-xs font-medium border ${categoryColors[cat] ||
-                                                                "bg-cobalt/50 text-foreground-muted border-cobalt"
-                                                                }`}
-                                                        >
-                                                            {cat}
-                                                        </span>
-                                                    ))}
+                                                    <span
+                                                        className={`inline-block px-3 py-1 rounded-full text-xs font-medium border ${categoryColors[post.category || "Technology"] ||
+                                                            "bg-cobalt/50 text-foreground-muted border-cobalt"
+                                                            }`}
+                                                    >
+                                                        {post.category || "Technology"}
+                                                    </span>
                                                 </div>
 
                                                 {/* Title */}
@@ -112,11 +109,11 @@ export function BlogGridClient({ posts }: BlogGridClientProps) {
                                                             <Calendar className="w-4 h-4" />
                                                             {formatDate(post.publishedAt)}
                                                         </span>
-                                                        {/* Author Name - Added per request */}
-                                                        {post.author?.name && (
+                                                        {/* Author Name */}
+                                                        {post.authorName && (
                                                             <span className="hidden md:flex items-center gap-1.5 text-accent-cyan/80">
                                                                 <span className="w-1 h-1 rounded-full bg-accent-cyan/50" />
-                                                                {post.author.name}
+                                                                {post.authorName}
                                                             </span>
                                                         )}
                                                     </div>

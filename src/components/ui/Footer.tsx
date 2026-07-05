@@ -142,7 +142,7 @@ export function Footer() {
                             at SRM IST KTR
                         </p>
                         <p className="text-foreground-dim text-xs">
-                            Built with Next.js + Sanity
+                            Built with Next.js
                         </p>
                     </div>
                 </div>

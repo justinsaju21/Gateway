@@ -7,6 +7,13 @@ import { useState } from "react";
 
 import { ThemeToggle } from "../ThemeToggle";
 
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/projects", label: "Projects" },
+  { href: "/blog", label: "Blog" },
+  { href: "/photography", label: "Photography" },
+];
+
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,7 +38,7 @@ export function Navbar() {
             backgroundColor: isScrolled ? "var(--glass-bg)" : "transparent",
             backdropFilter: isScrolled ? "blur(16px)" : "none",
             border: isScrolled ? "1px solid var(--glass-border)" : "none",
-            boxShadow: isScrolled ? "0 0 40px -10px rgba(205, 28, 24, 0.15)" : "none",
+            boxShadow: isScrolled ? "0 0 40px -10px rgba(124, 58, 237, 0.15)" : "none",
             paddingTop: isScrolled ? "0" : "1rem",
           }}
           className="pointer-events-auto transition-all duration-500 ease-out"
@@ -45,141 +52,92 @@ export function Navbar() {
             className="flex items-center justify-between transition-all duration-500"
           >
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2.5 group">
-              <div
-                style={{ backgroundColor: "var(--accent-cyan)" }}
-                className="flex items-center justify-center w-9 h-9 rounded-lg font-bold text-lg group-hover:scale-105 transition-transform"
+            <Link href="/" className="flex items-center gap-2.5 group" style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: 20,
+              color: 'var(--text-primary)',
+              textDecoration: 'none',
+              letterSpacing: '0.02em',
+            }}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                style={{ width: 22, height: 22, marginRight: 8, display: 'inline-block', verticalAlign: 'middle' }}
               >
-                <span style={{ color: "var(--background)" }}>J</span>
-              </div>
-              <div className="flex items-baseline gap-1.5">
-                <span style={{ color: "var(--foreground)" }} className="font-bold text-lg tracking-tight">Justin Jacob</span>
-                <span style={{ color: "var(--foreground)" }} className="font-bold text-lg tracking-tight">Saju</span>
-              </div>
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>
+              <span style={{ verticalAlign: 'middle', fontWeight: 600 }}>ECHO System</span>
             </Link>
 
             {/* Desktop Nav */}
-            <div className="hidden md:flex items-center gap-8">
-              <Link
-                href="/"
-                style={{ color: "var(--foreground-muted)" }}
-                className="text-sm font-medium hover:opacity-80 transition-opacity"
-              >
-                Home
-              </Link>
-              <Link
-                href="/projects"
-                style={{ color: "var(--foreground-muted)" }}
-                className="text-sm font-medium hover:opacity-80 transition-opacity"
-              >
-                Projects
-              </Link>
-              <Link
-                href="/blog"
-                style={{ color: "var(--foreground-muted)" }}
-                className="text-sm font-medium hover:opacity-80 transition-opacity"
-              >
-                Blog
-              </Link>
-              <Link
-                href="/photography"
-                style={{ color: "var(--foreground-muted)" }}
-                className="text-sm font-medium hover:opacity-80 transition-opacity"
-              >
-                Photography
-              </Link>
+            <div className="hidden md:flex items-center absolute left-1/2 -translate-x-1/2 gap-8">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  style={{ color: "var(--text-secondary)" }}
+                  className="text-sm font-medium hover:text-[var(--text-primary)] transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            {/* Right Actions */}
+            <div className="hidden md:flex items-center gap-4">
               <ThemeToggle />
             </div>
 
-            {/* CTA Button */}
-            <div className="hidden md:block">
-              <Link
-                href="https://portfolio.justinsaju.me"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  backgroundColor: "var(--accent-cyan)",
-                  color: "#ffffff",
-                  boxShadow: "0 0 20px -5px rgba(205, 28, 24, 0.5)",
-                }}
-                className="flex items-center gap-1.5 px-6 py-2.5 rounded-full text-sm font-semibold transition-all hover:opacity-90"
-              >
-                Portfolio
-              </Link>
-            </div>
-
             {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              style={{ color: "var(--foreground-muted)" }}
-              className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
-              aria-label="Toggle menu"
-            >
-              {mobileMenuOpen ? <X size={22} style={{ color: "var(--foreground)" }} /> : <Menu size={22} style={{ color: "var(--foreground)" }} />}
-            </button>
+            <div className="flex items-center gap-4 md:hidden">
+              <ThemeToggle />
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 rounded-lg hover:bg-white/10 transition-colors"
+                aria-label="Toggle menu"
+              >
+                {mobileMenuOpen ? (
+                  <X style={{ color: "var(--foreground)" }} className="w-6 h-6" />
+                ) : (
+                  <Menu style={{ color: "var(--foreground)" }} className="w-6 h-6" />
+                )}
+              </button>
+            </div>
           </nav>
-
-          {/* Mobile Menu */}
-          {mobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              style={{
-                backgroundColor: "var(--glass-bg)",
-                backdropFilter: "blur(16px)",
-                borderTop: "1px solid var(--glass-border)",
-              }}
-              className="md:hidden rounded-b-2xl mx-4 mb-4 overflow-hidden"
-            >
-              <div className="px-6 py-4 space-y-1">
-                <Link
-                  href="/"
-                  onClick={() => setMobileMenuOpen(false)}
-                  style={{ color: "var(--foreground-muted)" }}
-                  className="block py-2.5 px-4 hover:bg-white/5 rounded-lg transition-colors"
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/projects"
-                  onClick={() => setMobileMenuOpen(false)}
-                  style={{ color: "var(--foreground-muted)" }}
-                  className="block py-2.5 px-4 hover:bg-white/5 rounded-lg transition-colors"
-                >
-                  Projects
-                </Link>
-
-                <Link
-                  href="/blog"
-                  onClick={() => setMobileMenuOpen(false)}
-                  style={{ color: "var(--foreground-muted)" }}
-                  className="block py-2.5 px-4 hover:bg-white/5 rounded-lg transition-colors"
-                >
-                  Blog
-                </Link>
-
-                <Link
-                  href="/photography"
-                  onClick={() => setMobileMenuOpen(false)}
-                  style={{ color: "var(--foreground-muted)" }}
-                  className="block py-2.5 px-4 hover:bg-white/5 rounded-lg transition-colors"
-                >
-                  Photography
-                </Link>
-
-                <Link
-                  href="https://portfolio.justinsaju.me"
-                  onClick={() => setMobileMenuOpen(false)}
-                  style={{ backgroundColor: "var(--accent-cyan)", color: "#ffffff" }}
-                  className="block py-2.5 px-4 mt-4 font-semibold rounded-lg text-center"
-                >
-                  Portfolio
-                </Link>
-              </div>
-            </motion.div>
-          )}
         </motion.header>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-40 md:hidden"
+          style={{ backgroundColor: "var(--glass-bg)", backdropFilter: "blur(20px)" }}
+        >
+          <div className="flex flex-col items-center justify-center h-full gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                style={{ color: "var(--text-primary)" }}
+                className="text-2xl font-semibold hover:opacity-70 transition-opacity"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </motion.div>
+      )}
     </>
   );
 }

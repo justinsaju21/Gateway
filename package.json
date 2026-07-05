@@ -9,13 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@portabletext/react": "^6.0.2",
-    "@sanity/image-url": "^2.0.3",
     "clsx": "^2.1.1",
     "framer-motion": "^12.27.2",
+    "googleapis": "^173.0.0",
     "lucide-react": "^0.562.0",
     "next": "^15.2.0",
-    "next-sanity": "^9.12.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.4.0"
