@@ -9,9 +9,9 @@ import { ThemeToggle } from "../ThemeToggle";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
-  { href: "/blog", label: "Blog" },
-  { href: "/photography", label: "Photography" },
+  { href: "https://projects.justinsaju.me", label: "Projects" },
+  { href: "https://blog.justinsaju.me", label: "Blog" },
+  { href: "https://photography.justinsaju.me", label: "Photography" },
 ];
 
 export function Navbar() {
